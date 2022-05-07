@@ -3,12 +3,14 @@
     <header><h1>My Friends</h1></header>
     <ul>
       <friend-contact
-        v-for="friend in friends"
-        :key="friend.id"
-        :name="friend.name"
-        :phone-number="friend.phone"
-        :email-address="friend.email"
-        :is-favoriated="false"
+        name="Griffin Yang"
+        phone-number="17764484851"
+        email-address="griffinyang@gmail.com"
+      ></friend-contact>
+      <friend-contact
+        name="Rongxin Yang"
+        phone-number="13162912068"
+        email-address="rongxinyang@gmail.com"
       ></friend-contact>
     </ul>
   </section>
@@ -16,22 +18,7 @@
 <script>
 export default {
   data() {
-    return {
-      friends: [
-        {
-          id: 'manuel',
-          name: 'Manuel Lorenz',
-          phone: '17764484851',
-          email: 'manuel@gmail.com',
-        },
-        {
-          id: 'julie',
-          name: 'Julie Lorenz',
-          phone: '13162912058',
-          email: 'julie@gmail.com',
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>

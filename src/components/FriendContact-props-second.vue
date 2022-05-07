@@ -1,7 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }}{{ favoriate ? '(Favorite)' : '' }}</h2>
-    <button @click="toggleFavorited">Toggle Favorated</button>
+    <h2>{{ name }}{{}}</h2>
     <button @click="toggleDetails">
       {{ visiblity ? 'Hide' : 'Show' }} Details
     </button>
@@ -27,26 +26,22 @@ export default {
       required: true,
     },
     isFavoriated: {
-      type: Boolean,
+      type: String,
       required: false,
-      default: false,
-      //   validator: function (value) {
-      //     return value === '0' || value === '1';
-      //   },
+      default: '0',
+      validator: function (value) {
+        return value === '0' || value === '1';
+      },
     },
   },
   data() {
     return {
       visiblity: false,
-      favoriate: this.isFavoriated,
     };
   },
   methods: {
     toggleDetails() {
       this.visiblity = !this.visiblity;
-    },
-    toggleFavorited() {
-      this.favoriate = !this.favoriate;
     },
   },
 };
